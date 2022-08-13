@@ -1,0 +1,107 @@
+@import "null-style.scss";//!Обнуляющий стиль
+
+// //!___________________________________________|Цветовая палитра|____________________________________________________________
+
+$bg-color-1:rgba(13, 17, 23, 1);
+$bg-color-2:rgba(22, 27, 34, 1);
+// //*______________________________________________________________________________________________________________________
+$text-color-1:rgba(255, 255, 255, 1);
+$text-color-2:rgba(247, 129, 102, 1);
+// //*______________________________________________________________________________________________________________________
+$btn-color-1:rgba(35, 134, 54, 1);
+$btn-hover-color-1:#2ea043;
+
+// //*______________________________________________________________________________________________________________________
+$border-color-1:rgba(48, 54, 61, 1);
+// //!______________________________________________________________________________________________________________________
+
+
+// //!____________________________________________|Медиа запросы|____________________________________________________________
+*{
+    color: $text-color-1;
+
+}
+html{
+    body{
+        background: $bg-color-1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .text-container{
+            border: 1px solid $border-color-1;
+            background: $bg-color-2;
+            //width: 50vw;
+            //height: 30vh;
+            padding: 0 0 0 2vw;
+            
+            margin-bottom: 10vh;
+            &__toolbar{
+                width: 100%;
+                height: 4vh;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding: 0 1vw 0 0;
+            }
+            &__copy-btn{
+                cursor: pointer;
+            } 
+            &__text-field{
+                width: 50vw;
+                height: 30vh;
+                background: $bg-color-1;
+                border: 1px solid $border-color-1;
+                border-bottom: none;
+                border-left: none;
+                &_input{
+                  
+                }
+                &__output{
+                    
+                    
+                    p{
+                        color: $text-color-2;
+                    }
+                }
+            }
+            @media(max-width: 767px){
+                &__text-field{
+                    width: 90vw;
+                    
+                }
+            }
+            
+        }
+        .button-container{
+            width: 50vw;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 14px;
+            font-weight: bold;
+            @media(max-width: 767px){
+                width: 100vw;
+                justify-content: center;
+                &__process-button{
+                    padding: 0;
+                    width: 98%;
+                }
+            }
+            &__process-button{
+                margin-top: 1vh;
+                width: auto;
+                background: $btn-color-1;
+                border-radius: 6px;
+                padding: 1vh 2vw;
+                transition-duration: 500ms;
+                &:hover{
+                    background: $btn-hover-color-1;
+                }
+                
+                
+            }
+        }
+    }
+}
+
